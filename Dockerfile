@@ -11,8 +11,8 @@ RUN apt-get update && \
 RUN mkdir -p $GOPATH/src/github.com/cosmos && \
    cd $GOPATH/src/github.com/cosmos && \
    git clone https://github.com/cosmos/cosmos-sdk.git && \
-   git checkout origin/master -b master && \
    cd cosmos-sdk && \
+   git checkout origin/master -b master && \
    make devtools && \
    make vendor-deps && \
    make install
