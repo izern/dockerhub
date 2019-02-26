@@ -12,7 +12,7 @@ RUN mkdir -p $GOPATH/src/github.com/cosmos && \
    cd $GOPATH/src/github.com/cosmos && \
    git clone https://github.com/cosmos/cosmos-sdk.git && \
    cd cosmos-sdk && \
-   git checkout origin/master -b master && \
+   git checkout origin/v0.32.0 -b v0.32.0 && \
    make devtools && \
    make vendor-deps && \
    make install
