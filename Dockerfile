@@ -15,6 +15,7 @@ RUN apt-get install -y libx11-dev libxext-dev libxrender-dev libxtst-dev libxt-d
 # 下载openjdk7作为boot-jdk
 RUN wget https://download.java.net/openjdk/jdk7u75/ri/openjdk-7u75-b13-linux-x64-18_dec_2014.tar.gz \
     && ls ./ \
+	&& mkdir openjdk-7u75 \
     && tar -zxf openjdk-7u75-b13-linux-x64-18_dec_2014.tar.gz -C openjdk-7u75 \
     && ls openjdk-7u75 \
     && rm -rf openjdk-7u75-b13-linux-x64-18_dec_2014.tar.gz
