@@ -6,7 +6,7 @@ WORKDIR /opt/jdk/
 RUN apt-get update  \
 	&& apt-get install -y mercurial \
 	&& hg clone http://hg.openjdk.java.net/jdk8u/jdk8u/ openjdk8u \
-    && cd openjdk8u && bash ./get_source.sh 
+    && cd openjdk8u && bash ./get_source.sh && pwd && ls ./ 
 
 # 设置个时区，避免下一个命令提示输入时区
 RUN echo Asia/Shanghai > /etc/timezone \
